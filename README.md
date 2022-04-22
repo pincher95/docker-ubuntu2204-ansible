@@ -1,8 +1,8 @@
-# Ubuntu Jammy 22.04 Ansible Test Image
+# Ubuntu 22.04 LTS (Jammy Jellyfish) Ansible Test Image
 
-[![pipeline status]()]() [![Docker pulls](https://img.shields.io/docker/pulls/pincher95/docker-ubuntu2204-ansible)](https://hub.docker.com/r/pincher95/docker-ubuntu2204-ansible/)
+[![CI](https://github.com/pincher95/docker-ubuntu2204-ansible/workflows/Build/badge.svg?branch=master&event=push)](https://github.com/pincher95/docker-ubuntu2204-ansible/actions?query=workflow%3ABuild) [![Docker pulls](https://img.shields.io/docker/pulls/pincher95/docker-ubuntu2204-ansible)](https://hub.docker.com/r/pincher95/docker-ubuntu2204-ansible/)
 
-Ubuntu Jammy 22.04 Docker container for Ansible playbook and role testing.
+Ubuntu 22.04 LTS (Jammy Jellyfish) Docker container for Ansible playbook and role testing.
 
 ## Tags
 
