@@ -30,7 +30,7 @@ RUN apt-get update \
     && pip3 install $pip_packages \
     # Ansible fix “Failed to create temporary directory”
     && mv /usr/bin/sleep /usr/bin/sleep.orig \
-    && ln -s /bin/sleep /usr/bin/sleep \
+    && ln -s /bin/sleep /usr/bin/sleep
 
 COPY initctl_faker .
 RUN chmod +x initctl_faker && rm -fr /sbin/initctl && ln -s /initctl_faker /sbin/initctl \
