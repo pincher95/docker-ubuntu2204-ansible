@@ -26,8 +26,11 @@ RUN apt-get update \
     && sed -i 's/^\($ModLoad imklog\)/#\1/' /etc/rsyslog.conf \
     # Fix potential UTF-8 errors with ansible-test.
     && locale-gen en_US.UTF-8 \
-     # Install Ansible via Pip.
-    && pip3 install $pip_packages
+    # Install Ansible via Pip.
+    && pip3 install $pip_packages \
+    # Ansible fix “Failed to create temporary directory”
+    && mv /usr/bin/sleep /usr/bin/sleep.orig \
+    && ln -s /bin/sleep /usr/bin/sleep \
 
 COPY initctl_faker .
 RUN chmod +x initctl_faker && rm -fr /sbin/initctl && ln -s /initctl_faker /sbin/initctl \
